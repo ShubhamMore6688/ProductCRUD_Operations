@@ -3,6 +3,7 @@ package com.java.product.controller;
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 
+
 import com.java.product.doa.ProductDoa;
 import com.java.product.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +23,11 @@ public class ProductController {
     @Autowired
     private ProductDoa productDoa;
 
+
+
     @RequestMapping("/")
     public String home(Model m){
-        List<Product> products = productDoa.getAllProducts();
+        List<Product> products = this.productDoa.getAllProducts();
         m.addAttribute("products", products);
         return "home";
     }

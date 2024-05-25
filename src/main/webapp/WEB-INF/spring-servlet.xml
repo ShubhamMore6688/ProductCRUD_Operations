@@ -33,7 +33,6 @@
                 <prop key="hibernate.hbm2ddl.auto">update</prop>
             </props>
         </property>
-
         <property name="annotatedClasses">
             <list>
                 <value>com.java.product.model.Product</value>
