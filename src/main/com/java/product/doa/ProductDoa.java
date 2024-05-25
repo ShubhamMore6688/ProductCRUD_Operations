@@ -16,7 +16,7 @@ public class ProductDoa {
 
     @Transactional
     public void createProduct(Product product){
-        this.hibernateTemplate.save(product);
+        this.hibernateTemplate.saveOrUpdate(product);
     }
 
     public List<Product> getAllProducts(){

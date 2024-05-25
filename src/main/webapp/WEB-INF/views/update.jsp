@@ -1,3 +1,4 @@
+<%@page isELIgnored="false" %>
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,36 +9,38 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Product</title>
+    <title>update</title>
   </head>
   <body>
 
-  <div class="container text-center mt-4">
-    <h2>Add Product</h2>
-  </div>
+   <div class="container text-center mt-4">
+     <h2>Update Product</h2>
+   </div>
+   <form action="${pageContext.request.contextPath }/updateproduct" method="post">
 
-   <form action="add" method="post">
+    <div class="container mt-3 w-50">
 
-   <div class="container mt-3 w-50">
-
-
+            <div class="form-group">
+               <label for="id">Name</label>
+               <input type="text" class="form-control" id="id" name="id" value="${product.id}">
+            </div>
              <div class="form-group">
                <label for="name">Name</label>
-               <input type="text" class="form-control" id="name" name="name">
+               <input type="text" class="form-control" id="name" name="name" value="${product.name}">
              </div>
 
              <div class="form-group">
                  <label for="description">Description</label>
-                 <input type="text" class="form-control" id="Description" name="description">
+                 <input type="text" class="form-control" id="Description" name="description" value="${product.description}">
               </div>
 
              <div class="form-group">
                   <label for="price">Price</label>
-                  <input type="text" class="form-control" id="price" name="price">
+                  <input type="text" class="form-control" id="price" name="price" value="${product.price}">
              </div>
 
              <div class="container text-center mt-4">
-                <button type="submit" class="btn btn-primary text-center ">Submit</button>
+                 <button type="submit" class="btn btn-primary">Update</button>
              </div>
 
    </div>

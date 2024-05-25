@@ -10,12 +10,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/bdf08c7018.js" crossorigin="anonymous"></script>
-    <title>Hello, world!</title>
+    <title>Home</title>
   </head>
   <body>
 
-       <div class="container mt-3">
-           <table class="table">
+       <div class="container mt-4 text-center">
+           <h2>Product Details</h2>
+           <table class="table mt-3">
                  <thead class="thead-dark">
                    <tr>
                      <th scope="col">Id</th>
@@ -34,8 +35,9 @@
                          <td>${p.description}</td>
                          <td>${p.price}</td>
                          <td>
-                            <a href="delete/${p.id}"><i class="fa-solid fa-trash"></i></a>
-                            <a href="#"><i class="fa-solid fa-pen-nib"></i></a>
+                            <a href="update/${p.id}"><i class="fa-solid fa-pen-nib mr-4"></i></a>
+                            <a href="delete/${p.id}"><i class="fa-solid fa-trash text-danger"></i></a>
+
 
                          </td>
 
@@ -45,7 +47,10 @@
                  </tbody>
                </table>
 
+                <div class="container">
+                    <a href="product" class="link-success btn btn-success">Add Product</a>
 
+                </div>
 
        </div>
 
